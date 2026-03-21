@@ -1,0 +1,78 @@
+{
+  "______ISTRUZIONI______": "Modifica questo file per aggiornare la pagina. NON toccare le virgolette o le parentesi graffe. Salva il file e ricarica la pagina nel browser.",
+
+  "profilo": {
+    "logo": "assets/images/logo.jpg",
+    "nome": "",
+    "sottotitolo": "",
+    "descrizione": "Percorso di trasformazione per cantanti e artisti che vogliono esprimersi con autenticità, presenza e libertà."
+  },
+
+  "link": [
+    {
+      "attivo": true,
+      "etichetta": "Instagram",
+      "url": "https://www.instagram.com/_elle.v_",
+      "icona": "instagram",
+      "evidenziato": false
+    },
+    {
+      "attivo": true,
+      "etichetta": "Facebook",
+      "url": "https://www.facebook.com/luca.vettoretto/",
+      "icona": "facebook",
+      "evidenziato": false
+    },
+    {
+      "attivo": true,
+      "etichetta": "TikTok",
+      "url": "https://www.tiktok.com/@elle.v7",
+      "icona": "tiktok",
+      "evidenziato": false
+    },
+    {
+      "attivo": false,
+      "etichetta": "YouTube",
+      "url": "https://youtube.com/@TUO_CANALE",
+      "icona": "youtube",
+      "evidenziato": false
+    },
+    {
+      "attivo": false,
+      "etichetta": "Spotify",
+      "url": "https://open.spotify.com/artist/TUO_ID",
+      "icona": "spotify",
+      "evidenziato": false
+    },
+    {
+      "attivo": true,
+      "etichetta": "✏️ Scopri col Questionario se VOICE fa per Te!",
+      "url": "https://tally.so/r/7RdlB2",
+      "icona": "email",
+      "evidenziato": true
+    },
+    {
+      "attivo": false,
+      "etichetta": "LinkedIn",
+      "url": "https://linkedin.com/in/TUO_PROFILO",
+      "icona": "linkedin",
+      "evidenziato": false
+    },
+    {
+      "attivo": false,
+      "etichetta": "Sito Web",
+      "url": "https://TUOSITO.com",
+      "icona": "website",
+      "evidenziato": false
+    },
+    {
+      "attivo": false,
+      "etichetta": "Email",
+      "url": "mailto:tua@email.com",
+      "icona": "email",
+      "evidenziato": false
+    }
+  ],
+
+  "footer": "© 2025 VOICE – Unlock Your Art"
+}

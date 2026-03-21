@@ -1,0 +1,3 @@
+{"event":"HOOK_INVOKED","handler":"pre_tool_use","hook_id":"6daee6e9-14fa-4f7d-a76c-b0b477da885a","input_summary":{"has_max_turns":false,"subagent_type":"Explore"},"timestamp":"2026-03-21T14:43:01.748256+00:00"}
+{"event":"HOOK_PRE_TOOL_USE_BLOCKED","hook_id":"6daee6e9-14fa-4f7d-a76c-b0b477da885a","reason":"MISSING_MAX_TURNS: The max_turns parameter is required for all Task invocations. Add max_turns parameter (e.g., max_turns=30) to prevent unbounded execution.","timestamp":"2026-03-21T14:43:01.749424+00:00"}
+{"decision":"block","duration_ms":4.5195,"event":"HOOK_COMPLETED","exit_code":2,"handler":"pre_tool_use","hook_id":"6daee6e9-14fa-4f7d-a76c-b0b477da885a","timestamp":"2026-03-21T14:43:01.749929+00:00"}
