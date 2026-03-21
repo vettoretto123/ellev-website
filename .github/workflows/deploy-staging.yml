@@ -17,7 +17,7 @@ jobs:
         uses: nwtgck/actions-netlify@v3.0
         with:
           publish-dir: '.'
-          production-deploy: false
+          production-deploy: true
           deploy-message: "Deploy Staging - ${{ github.sha }}"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
