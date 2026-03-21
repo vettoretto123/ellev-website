@@ -627,6 +627,7 @@ footer p { font-size: 0.75rem; color: var(--gray); }
   max-width: 360px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: left bottom;
   display: block;
 }
 .coach-content {
