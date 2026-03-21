@@ -6,8 +6,11 @@
   "other_lang_url": "/",
   "meta_title": "VOICE — Unlock Your Art",
   "meta_description": "A transformation journey for singers and artists who want to overcome blocks, fears and self-sabotage.",
+  "og_image": "https://TUOSITO.com/assets/images/og-image.jpg",
 
   "nav_cta": "Book Your Free Call",
+  "cta_url": "https://calendly.com/TUO_LINK",
+  "scroll_label": "Scroll",
 
   "hero_title_1": "Unlock your",
   "hero_title_gold": "Voice.",
@@ -66,6 +69,16 @@
   "perchi_r5": "The ability to show up fully, every time",
   "perchi_r6": "A life aligned with your art",
 
+  "nonperchi_label": "// This is not for you if...",
+  "nonperchi_title_1": "This journey",
+  "nonperchi_title_em": "is not for everyone",
+  "nonperchi_items": [
+    "[To configure] You're only looking for vocal technique or a traditional singing course.",
+    "[To configure] You're not willing to do deep inner work.",
+    "[To configure] You want immediate results without real commitment.",
+    "[To configure] You're going through an acute personal crisis that requires professional psychological support."
+  ],
+
   "struttura_label": "// Structure",
   "struttura_title_1": "How the",
   "struttura_title_em": "journey works",
@@ -84,6 +97,35 @@
   "perche_title_em": "free artists",
   "perche_manifesto": "Not perfect. <strong>Free.</strong><br><br>Every artist who unlocks themselves doesn't just change their career.<br>They change their life.<br><br><em>And when you change, your art changes. And your art changes the world.</em>",
 
+  "coach_label": "// Who I am",
+  "coach_title_1": "Elle V —",
+  "coach_title_em": "Your coach",
+  "coach_name": "Elle V",
+  "coach_bio_1": "[To configure] Describe your personal journey here: where you started, what you experienced as an artist, the turning point that led you to create VOICE.",
+  "coach_bio_2": "[To configure] Add your credentials, training or the approach that sets your method apart.",
+  "coach_quote": "[To configure] A phrase that represents you as a coach and as an artist.",
+
+  "testi_label": "// What they say",
+  "testi_title_1": "Artists who have",
+  "testi_title_em": "already unlocked",
+  "testi_show": true,
+  "testi": [
+    { "nome": "Sara M.", "ruolo": "Singer-songwriter", "testo": "Before VOICE I froze every time I stepped on stage. Now I perform with a presence I didn't know I had. Everything changed." },
+    { "nome": "Luca F.", "ruolo": "Actor & performer", "testo": "I thought it was a technical problem. It was actually a deep block I'd been carrying for years. In three months I made more progress than in five years of courses." },
+    { "nome": "Giulia R.", "ruolo": "Musician", "testo": "Elle V has a way of working that goes straight to the point. No theory, no empty exercises — real transformation. My career has restarted." }
+  ],
+
+  "faq_label": "// Frequently Asked Questions",
+  "faq_title_1": "Got",
+  "faq_title_em": "any questions?",
+  "faq_show": true,
+  "faq": [
+    { "q": "[To configure] How much does the journey cost?",        "a": "[To configure] Answer." },
+    { "q": "[To configure] How do the sessions work?",              "a": "[To configure] Answer." },
+    { "q": "[To configure] Do I need to be a professional artist?", "a": "[To configure] Answer." },
+    { "q": "[To configure] What if the journey isn't right for me?","a": "[To configure] Answer." }
+  ],
+
   "cta_eyebrow": "// Free Unlock Call",
   "cta_title_1": "Book your",
   "cta_title_gold": "Free Call",
@@ -91,5 +133,13 @@
   "cta_btn": "Book Now — It's Free",
   "cta_note": "✦ Limited spots each month ✦",
 
-  "footer_copy": "© 2025 VOICE – Unlock Your Art. All rights reserved."
+  "social": [
+    { "attivo": true,  "icona": "instagram", "url": "https://www.instagram.com/_elle.v_",        "label": "Instagram" },
+    { "attivo": true,  "icona": "facebook",  "url": "https://www.facebook.com/luca.vettoretto/", "label": "Facebook" },
+    { "attivo": true,  "icona": "tiktok",    "url": "https://www.tiktok.com/@elle.v7",            "label": "TikTok" },
+    { "attivo": false, "icona": "youtube",   "url": "https://youtube.com/@TUO_CANALE",             "label": "YouTube" },
+    { "attivo": false, "icona": "spotify",   "url": "https://open.spotify.com/artist/TUO_ID",     "label": "Spotify" }
+  ],
+
+  "footer_copy": "© 2026 VOICE – Unlock Your Art. All rights reserved."
 }

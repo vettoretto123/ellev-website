@@ -544,7 +544,7 @@ footer p { font-size: 0.75rem; color: var(--gray); }
 @media (max-width: 800px) {
   nav { padding: 0.9rem 1.4rem; }
   .nav-right { gap: 1rem; }
-  .nav-cta { display: none; }
+  .nav-cta { font-size: 0.7rem; padding: 0.45rem 0.9rem; }
   .two-col { grid-template-columns: 1fr; gap: 3rem; }
   .struttura-grid { grid-template-columns: 1fr; }
   .pillars { grid-template-columns: 1fr 1fr; }
@@ -554,3 +554,179 @@ footer p { font-size: 0.75rem; color: var(--gray); }
   section { padding: 5rem 1.2rem; }
   .pillars { grid-template-columns: 1fr; }
 }
+
+/* ─── NON PER CHI ─── */
+.nonperchi-list {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem auto 0;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.nonperchi-item {
+  padding: 1.2rem 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: left;
+  color: var(--gray);
+  position: relative;
+  padding-left: 2.8rem;
+}
+.nonperchi-item::before {
+  content: "✕";
+  position: absolute;
+  left: 1rem;
+  color: #c0392b;
+  font-weight: 700;
+}
+
+/* ─── COACH BIO ─── */
+.coach-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.coach-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1.5;
+}
+.coach-name {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* ─── TESTIMONIANZE CAROSELLO ─── */
+.testi-carousel {
+  margin-top: 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.testi-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.testi-card {
+  min-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-sizing: border-box;
+}
+.testi-testo {
+  font-style: italic;
+  color: var(--light);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.testi-nome {
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0;
+}
+.testi-ruolo {
+  color: var(--gray);
+  font-size: 0.85rem;
+  margin: 0;
+}
+.testi-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+.testi-prev, .testi-next {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--light);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+.testi-prev:hover, .testi-next:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.testi-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+.testi-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background 0.2s;
+}
+.testi-dot.active {
+  background: var(--gold);
+}
+
+/* ─── FAQ ─── */
+.faq-list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 780px;
+}
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.faq-question {
+  padding: 1.2rem 1.6rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--light);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--gold);
+  transition: transform 0.2s ease;
+}
+details[open] .faq-question::after {
+  transform: rotate(45deg);
+}
+.faq-answer {
+  padding: 0 1.6rem 1.2rem;
+  color: var(--gray);
+  margin: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+/* ─── FOOTER SOCIAL ─── */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.social-link {
+  color: var(--gray);
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+.social-link:hover { color: var(--gold); }

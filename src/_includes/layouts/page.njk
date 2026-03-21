@@ -15,10 +15,11 @@ layout: layouts/base.njk
     <span class="teal">{{ t.hero_title_2 }}</span> {{ t.hero_title_3 }}
   </h1>
   <p class="hero-sub">{{ t.hero_sub }}</p>
+  <a href="{{ t.cta_url }}" class="btn-main" style="margin-top:2.4rem">{{ t.cta_btn }}</a>
 
   <div class="hero-scroll">
     <div class="line"></div>
-    <span>Scroll</span>
+    <span>{{ t.scroll_label }}</span>
   </div>
 </header>
 
@@ -102,6 +103,18 @@ layout: layouts/base.njk
   </div>
 </section>
 
+<!-- PER CHI NON È / NOT FOR YOU IF -->
+<section id="nonperchi" class="reveal text-center">
+  <p class="section-label">{{ t.nonperchi_label }}</p>
+  <h2 class="section-title">{{ t.nonperchi_title_1 }}<br/><em>{{ t.nonperchi_title_em }}</em></h2>
+  <div class="divider mx-auto"></div>
+  <ul class="nonperchi-list">
+    {% for item in t.nonperchi_items %}
+    <li class="nonperchi-item">{{ item }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
 <!-- STRUTTURA / STRUCTURE -->
 <section id="struttura" class="reveal text-center">
   <p class="section-label">{{ t.struttura_label }}</p>
@@ -137,6 +150,67 @@ layout: layouts/base.njk
   <p class="manifesto">{{ t.perche_manifesto | safe }}</p>
 </section>
 
+<!-- COACH / BIO -->
+<section id="coach" class="reveal two-col">
+  <div>
+    <p class="section-label">{{ t.coach_label }}</p>
+    <h2 class="section-title">{{ t.coach_title_1 }}<br/><em>{{ t.coach_title_em }}</em></h2>
+    <div class="divider"></div>
+    <p>{{ t.coach_bio_1 }}</p>
+    <p>{{ t.coach_bio_2 }}</p>
+  </div>
+  <div class="coach-aside">
+    <div class="coach-quote">{{ t.coach_quote }}</div>
+    <p class="coach-name">— {{ t.coach_name }}</p>
+  </div>
+</section>
+
+<!-- TESTIMONIANZE / TESTIMONIALS -->
+{% if t.testi_show %}
+<section id="testimonianze" class="reveal text-center">
+  <p class="section-label">{{ t.testi_label }}</p>
+  <h2 class="section-title">{{ t.testi_title_1 }}<br/><em>{{ t.testi_title_em }}</em></h2>
+  <div class="divider mx-auto"></div>
+  <div class="testi-carousel">
+    <div class="testi-track">
+      {% for testi in t.testi %}
+      <div class="testi-card">
+        <p class="testi-testo">{{ testi.testo }}</p>
+        <p class="testi-nome">{{ testi.nome }}</p>
+        <p class="testi-ruolo">{{ testi.ruolo }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="testi-controls">
+      <button class="testi-prev" aria-label="Precedente">&#8592;</button>
+      <div class="testi-dots">
+        {% for testi in t.testi %}
+        <span class="testi-dot{% if loop.first %} active{% endif %}"></span>
+        {% endfor %}
+      </div>
+      <button class="testi-next" aria-label="Successiva">&#8594;</button>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- FAQ -->
+{% if t.faq_show %}
+<section id="faq" class="reveal">
+  <p class="section-label">{{ t.faq_label }}</p>
+  <h2 class="section-title">{{ t.faq_title_1 }}<br/><em>{{ t.faq_title_em }}</em></h2>
+  <div class="divider"></div>
+  <div class="faq-list">
+    {% for item in t.faq %}
+    <details class="faq-item">
+      <summary class="faq-question">{{ item.q }}</summary>
+      <p class="faq-answer">{{ item.a }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <!-- CTA -->
 <section id="cta" class="cta-section">
   <div class="cta-bg"></div>
@@ -144,7 +218,7 @@ layout: layouts/base.njk
     <span class="cta-eyebrow">{{ t.cta_eyebrow }}</span>
     <h2 class="cta-title">{{ t.cta_title_1 }}<br/><span>{{ t.cta_title_gold }}</span></h2>
     <p class="cta-body">{{ t.cta_body | safe }}</p>
-    <a href="#" class="btn-main">{{ t.cta_btn }}</a>
+    <a href="{{ t.cta_url }}" class="btn-main">{{ t.cta_btn }}</a>
     <p class="cta-note">{{ t.cta_note }}</p>
   </div>
 </section>
@@ -152,5 +226,24 @@ layout: layouts/base.njk
 <!-- FOOTER -->
 <footer>
   <img src="/assets/images/logo.jpg" alt="VOICE" />
+  <div class="footer-social">
+    {% for s in t.social %}
+    {% if s.attivo %}
+    <a href="{{ s.url }}" class="social-link" aria-label="{{ s.label }}" target="_blank" rel="noopener noreferrer">
+      {% if s.icona == "instagram" %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      {% elif s.icona == "facebook" %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      {% elif s.icona == "tiktok" %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+      {% elif s.icona == "youtube" %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+      {% elif s.icona == "spotify" %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 11.973c2.5-1.473 5.5-.973 7.5.527M9 15c1.833-1 4.167-.667 6 .5M7.5 8.5c2.833-1.5 7-1 10 1.5"/></svg>
+      {% endif %}
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
   <p>{{ t.footer_copy }}</p>
 </footer>
