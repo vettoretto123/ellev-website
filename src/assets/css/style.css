@@ -170,7 +170,7 @@ nav {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
-.nav-logo { height: 72px; width: auto; }
+.nav-logo { height: 48px; width: auto; margin-top:10px}
 .nav-right {
   display: flex;
   align-items: center;
