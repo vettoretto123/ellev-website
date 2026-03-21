@@ -152,14 +152,15 @@ layout: layouts/base.njk
 
 <!-- COACH / BIO -->
 <section id="coach" class="reveal two-col">
-  <div>
+  <div class="coach-photo-wrap">
+    <div class="coach-photo-placeholder"></div>
+  </div>
+  <div class="coach-content">
     <p class="section-label">{{ t.coach_label }}</p>
     <h2 class="section-title">{{ t.coach_title_1 }}<br/><em>{{ t.coach_title_em }}</em></h2>
     <div class="divider"></div>
     <p>{{ t.coach_bio_1 }}</p>
     <p>{{ t.coach_bio_2 }}</p>
-  </div>
-  <div class="coach-aside">
     <div class="coach-quote">{{ t.coach_quote }}</div>
     <p class="coach-name">— {{ t.coach_name }}</p>
   </div>

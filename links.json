@@ -31,7 +31,7 @@
       "evidenziato": false
     },
     {
-      "attivo": false,
+      "attivo": true,
       "etichetta": "YouTube",
       "url": "https://youtube.com/@TUO_CANALE",
       "icona": "youtube",
