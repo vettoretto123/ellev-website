@@ -622,6 +622,13 @@ footer p { font-size: 0.75rem; color: var(--gray); }
   background: var(--obsidian);
   border: 1px solid var(--border);
 }
+.coach-photo {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
 .coach-content {
   display: flex;
   flex-direction: column;
