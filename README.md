@@ -1,117 +1,80 @@
-# VOICE – Link in Bio
+# VOICE – Unlock Your Art
 
-Pagina link-in-bio per il profilo VOICE. Zero dipendenze esterne, nessun cookie.
-
----
-
-## Come aggiungere il logo
-
-1. Copia il tuo file logo nella cartella `assets/images/`
-2. Rinominalo `logo.png`  
-   (se usi `.jpg` o `.svg`, aggiorna la riga `"logo"` in `links.json`)
-
----
-
-## Come modificare i link — solo `links.json`
-
-Apri il file `links.json` con qualsiasi editor di testo (anche Blocco Note su Windows).
-
-### Attivare / disattivare un link
-
-Cambia `"attivo": true` in `"attivo": false` per nasconderlo:
-
-```json
-{
-  "attivo": false,    ← questo link NON appare
-  "etichetta": "LinkedIn",
-  ...
-}
-```
-
-### Cambiare l'URL
-
-Sostituisci il testo dopo `"url":` tra le virgolette:
-
-```json
-"url": "https://instagram.com/MIOPROFILO"
-```
-
-### Cambiare l'etichetta (testo del bottone)
-
-```json
-"etichetta": "Seguimi su Instagram"
-```
-
-### Mettere un bottone in evidenza (dorato / colorato)
-
-```json
-"evidenziato": true
-```
-
-### Aggiungere un nuovo link
-
-Copia e incolla uno dei blocchi esistenti e modifica i valori:
-
-```json
-{
-  "attivo": true,
-  "etichetta": "Il mio nuovo link",
-  "url": "https://esempio.com",
-  "icona": "website",
-  "evidenziato": false
-}
-```
-
-### Icone disponibili
-
-| Valore da usare | Social / servizio  |
-|-----------------|--------------------|
-| `instagram`     | Instagram          |
-| `facebook`      | Facebook           |
-| `tiktok`        | TikTok             |
-| `youtube`       | YouTube            |
-| `spotify`       | Spotify            |
-| `linkedin`      | LinkedIn           |
-| `whatsapp`      | WhatsApp           |
-| `telegram`      | Telegram           |
-| `email`         | Email              |
-| `calendar`      | Prenotazione/Call  |
-| `website`       | Sito generico      |
-
----
+Sito statico bilingue (IT/EN) generato con [Eleventy (11ty)](https://www.11ty.dev/).
 
 ## Struttura cartella
 
 ```
-voice-linkinbio/
-├── index.html          ← la pagina web
-├── links.json          ← ← ← il file che modifichi tu
-├── assets/
-│   └── images/
-│       └── logo.png    ← ← ← il tuo logo qui
-└── README.md           ← questo file
+voice-site/
+├── src/
+│   ├── _data/
+│   │   ├── it.json          ← tutti i testi in italiano
+│   │   └── en.json          ← tutti i testi in inglese
+│   ├── _includes/
+│   │   └── layouts/
+│   │       ├── base.njk     ← layout HTML (navbar, footer, head)
+│   │       └── page.njk     ← contenuto pagina (sezioni)
+│   ├── it/
+│   │   ├── it.11tydata.js   ← inietta traduzioni IT nelle pagine IT
+│   │   └── index.njk        ← homepage italiana → genera /index.html
+│   ├── en/
+│   │   ├── en.11tydata.js   ← inietta traduzioni EN nelle pagine EN
+│   │   └── index.njk        ← homepage inglese  → genera /en/index.html
+│   └── assets/
+│       ├── css/style.css
+│       ├── js/main.js
+│       └── images/
+│           └── logo.png     ← ← ← METTI QUI IL TUO LOGO
+├── eleventy.config.js
+├── netlify.toml
+└── package.json
 ```
 
----
+## Aggiungere il logo
 
-## Come pubblicare su Netlify
+1. Rinomina il tuo file logo in `logo.png` (o `.jpg`, `.svg`)
+2. Copialo in `src/assets/images/`
+3. Se usi un'estensione diversa da `.png`, aggiorna i riferimenti in:
+   - `src/_includes/layouts/base.njk`  → `<img src="/assets/images/logo.png" ...>`
+   - `src/_includes/layouts/page.njk`  → stessa cosa in hero e footer
 
-### Opzione A — Drag & Drop (la più semplice)
-1. Vai su [app.netlify.com/drop](https://app.netlify.com/drop)
-2. Trascina l'intera cartella `voice-linkinbio/`
-3. Netlify genera un URL — fatto!
+## Sviluppo locale
 
-### Opzione B — Git
-1. Push su GitHub
+```bash
+npm install
+npm start
+# → http://localhost:8080       (IT)
+# → http://localhost:8080/en/   (EN)
+```
+
+## Build per produzione
+
+```bash
+npm run build
+# Output in _site/
+```
+
+## Deploy su Netlify
+
+### Opzione A — Drag & Drop
+1. Fai `npm run build` in locale
+2. Trascina la cartella `_site/` su [app.netlify.com/drop](https://app.netlify.com/drop)
+
+### Opzione B — Git + Netlify CI (consigliata)
+1. Push su GitHub/GitLab
 2. Collega il repo su Netlify
-3. Ogni volta che modifichi `links.json` e fai push, il sito si aggiorna
+3. Il `netlify.toml` configura automaticamente build command e publish dir
 
----
+## Aggiornare i testi
 
-## Note tecniche
+Modifica solo i file JSON in `src/_data/`:
+- `it.json` → testi italiani
+- `en.json` → testi inglesi
 
-- Nessuna libreria esterna
-- Nessun Google Fonts (zero cookie da font)
-- Font system: usa i font del sistema operativo
-- Funziona su tutti i browser moderni
-- **Attenzione**: in locale (aprendo `index.html` direttamente dal file system) il browser blocca il caricamento di `links.json` per motivi di sicurezza. Usa sempre un server locale (`npx serve .`) o pubblica su Netlify per testare.
+Non toccare i file `.njk` se vuoi solo cambiare copy.
+
+## Aggiungere una nuova lingua (es. FR)
+
+1. Crea `src/_data/fr.json` (copia e traduci `it.json`)
+2. Crea cartella `src/fr/` con `fr.11tydata.js` e `index.njk`
+3. Aggiorna il switcher in `base.njk`

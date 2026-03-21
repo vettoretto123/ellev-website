@@ -1,0 +1,156 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- HERO -->
+<header class="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <img src="/assets/images/logo.jpg" alt="VOICE Unlock Your Art" class="hero-logo" />
+
+  <h1 class="hero-tagline">
+    {{ t.hero_title_1 }} <span class="gold">{{ t.hero_title_gold }}</span><br/>
+    <span class="teal">{{ t.hero_title_2 }}</span> {{ t.hero_title_3 }}
+  </h1>
+  <p class="hero-sub">{{ t.hero_sub }}</p>
+
+  <div class="hero-scroll">
+    <div class="line"></div>
+    <span>Scroll</span>
+  </div>
+</header>
+
+<!-- PROBLEMA -->
+<section id="problema" class="reveal two-col">
+  <div class="problema-text">
+    <p class="section-label">{{ t.problema_label }}</p>
+    <h2 class="section-title">{{ t.problema_title_1 }}<br/><em>{{ t.problema_title_em }}</em></h2>
+    <div class="divider"></div>
+    <p>{{ t.problema_body_1 }}</p>
+    <p><strong>{{ t.problema_body_2 }}</strong></p>
+    <div class="pill-note">{{ t.problema_pill }}</div>
+  </div>
+  <ul class="blocchi-list">
+    <li>
+      <span class="icon">😰</span>
+      <div><strong>{{ t.blocco_1_title }}</strong><span class="desc">{{ t.blocco_1_sub }}</span></div>
+    </li>
+    <li>
+      <span class="icon">👁️</span>
+      <div><strong>{{ t.blocco_2_title }}</strong><span class="desc">{{ t.blocco_2_sub }}</span></div>
+    </li>
+    <li>
+      <span class="icon">🔁</span>
+      <div><strong>{{ t.blocco_3_title }}</strong><span class="desc">{{ t.blocco_3_sub }}</span></div>
+    </li>
+    <li>
+      <span class="icon">⚡</span>
+      <div><strong>{{ t.blocco_4_title }}</strong><span class="desc">{{ t.blocco_4_sub }}</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- COS'È / WHAT IS -->
+<section id="cose" class="reveal text-center">
+  <p class="section-label">{{ t.cose_label }}</p>
+  <h2 class="section-title">{{ t.cose_title_1 }}<br/><em>{{ t.cose_title_em }}</em></h2>
+  <div class="divider mx-auto"></div>
+  <p class="lead">{{ t.cose_body | safe }}</p>
+  <div class="big-quote">{{ t.cose_quote }}</div>
+</section>
+
+<!-- METODO -->
+<section id="metodo" class="reveal">
+  <p class="section-label">{{ t.metodo_label }}</p>
+  <h2 class="section-title">{{ t.metodo_title_1 }}<br/><em>{{ t.metodo_title_em }}</em></h2>
+  <div class="divider"></div>
+  <div class="pillars">
+    <div class="pillar"><span class="num">01</span><h3>{{ t.pillar_1_title }}</h3><p>{{ t.pillar_1_body }}</p></div>
+    <div class="pillar"><span class="num">02</span><h3>{{ t.pillar_2_title }}</h3><p>{{ t.pillar_2_body }}</p></div>
+    <div class="pillar"><span class="num">03</span><h3>{{ t.pillar_3_title }}</h3><p>{{ t.pillar_3_body }}</p></div>
+    <div class="pillar"><span class="num">04</span><h3>{{ t.pillar_4_title }}</h3><p>{{ t.pillar_4_body }}</p></div>
+    <div class="pillar"><span class="num">05</span><h3>{{ t.pillar_5_title }}</h3><p>{{ t.pillar_5_body }}</p></div>
+  </div>
+</section>
+
+<!-- PER CHI / WHO IT'S FOR -->
+<section id="perchi" class="reveal two-col">
+  <div>
+    <p class="section-label">{{ t.perchi_label }}</p>
+    <h2 class="section-title">{{ t.perchi_title_1 }}<br/><em>{{ t.perchi_title_em }}</em></h2>
+    <div class="divider"></div>
+    <div class="perchi-items">
+      <div class="perchi-item">{{ t.perchi_1 }}</div>
+      <div class="perchi-item">{{ t.perchi_2 }}</div>
+      <div class="perchi-item">{{ t.perchi_3 }}</div>
+      <div class="perchi-item">{{ t.perchi_4 }}</div>
+      <div class="perchi-item">{{ t.perchi_5 }}</div>
+    </div>
+  </div>
+  <div class="perchi-aside">
+    <p class="aside-title">{{ t.perchi_aside_title }}</p>
+    <ul>
+      <li>{{ t.perchi_r1 }}</li>
+      <li>{{ t.perchi_r2 }}</li>
+      <li>{{ t.perchi_r3 }}</li>
+      <li>{{ t.perchi_r4 }}</li>
+      <li>{{ t.perchi_r5 }}</li>
+      <li>{{ t.perchi_r6 }}</li>
+    </ul>
+  </div>
+</section>
+
+<!-- STRUTTURA / STRUCTURE -->
+<section id="struttura" class="reveal text-center">
+  <p class="section-label">{{ t.struttura_label }}</p>
+  <h2 class="section-title">{{ t.struttura_title_1 }}<br/><em>{{ t.struttura_title_em }}</em></h2>
+  <div class="divider mx-auto"></div>
+  <div class="struttura-grid">
+    <div class="st-card">
+      <div class="icon-big">🗓️</div>
+      <span class="highlight">{{ t.st1_val }}</span>
+      <h3>{{ t.st1_title }}</h3>
+      <p>{{ t.st1_body }}</p>
+    </div>
+    <div class="st-card">
+      <div class="icon-big">🎯</div>
+      <span class="highlight">{{ t.st2_val }}</span>
+      <h3>{{ t.st2_title }}</h3>
+      <p>{{ t.st2_body }}</p>
+    </div>
+    <div class="st-card">
+      <div class="icon-big">🛠️</div>
+      <span class="highlight">{{ t.st3_val }}</span>
+      <h3>{{ t.st3_title }}</h3>
+      <p>{{ t.st3_body }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- PERCHÉ / WHY -->
+<section id="perche" class="reveal text-center">
+  <p class="section-label">{{ t.perche_label }}</p>
+  <h2 class="section-title">{{ t.perche_title_1 }}<br/><em>{{ t.perche_title_em }}</em></h2>
+  <div class="divider mx-auto"></div>
+  <p class="manifesto">{{ t.perche_manifesto | safe }}</p>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="inner reveal">
+    <span class="cta-eyebrow">{{ t.cta_eyebrow }}</span>
+    <h2 class="cta-title">{{ t.cta_title_1 }}<br/><span>{{ t.cta_title_gold }}</span></h2>
+    <p class="cta-body">{{ t.cta_body | safe }}</p>
+    <a href="#" class="btn-main">{{ t.cta_btn }}</a>
+    <p class="cta-note">{{ t.cta_note }}</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="/assets/images/logo.jpg" alt="VOICE" />
+  <p>{{ t.footer_copy }}</p>
+</footer>

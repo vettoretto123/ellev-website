@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ t.lang }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ t.meta_title }}</title>
+  <meta name="description" content="{{ t.meta_description }}" />
+  <link rel="alternate" hreflang="it" href="/" />
+  <link rel="alternate" hreflang="en" href="/en/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="{{ '/' if t.lang == 'it' else '/en/' }}">
+      <img src="/assets/icons/apple-touch-icon.png" alt="VOICE Unlock Your Art" class="nav-logo" />
+    </a>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <span class="lang-active">{{ t.lang_label }}</span>
+        <span class="lang-sep">|</span>
+        <a href="{{ t.other_lang_url }}" class="lang-other">{{ t.other_lang_label }}</a>
+      </div>
+      <a href="#cta" class="nav-cta">{{ t.nav_cta }}</a>
+    </div>
+  </nav>
+
+  {{ content | safe }}
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
