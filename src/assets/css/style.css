@@ -168,12 +168,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: 0.4rem 3rem;
   background: rgba(13,13,13,0.88);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
-.nav-logo { height: 38px; width: auto; }
+.nav-logo { height: 72px; width: auto; }
 .nav-right {
   display: flex;
   align-items: center;
