@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guida — Come gestire il sito VOICE</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #e8e8e8;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 28px 80px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #222;
+    }
+    .header .logo {
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: #c9a84c;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .header p {
+      color: #888;
+      font-size: 16px;
+    }
+
+    /* Flusso principale */
+    .flow {
+      background: #111;
+      border: 1px solid #c9a84c33;
+      border-radius: 12px;
+      padding: 32px 36px;
+      margin-bottom: 48px;
+    }
+    .flow h2 {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 20px;
+    }
+    .flow-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .steps {
+      list-style: none;
+      counter-reset: step;
+    }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before {
+      content: counter(step);
+      min-width: 32px;
+      height: 32px;
+      background: #c9a84c;
+      color: #000;
+      font-weight: 800;
+      font-size: 14px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .steps li .step-text { padding-top: 4px; }
+    .steps li strong { color: #fff; }
+
+    /* Sezioni strumenti */
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .section-icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 2px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 24px 28px;
+    }
+    .card p { color: #bbb; margin-bottom: 12px; }
+    .card p:last-child { margin-bottom: 0; }
+
+    .file-badge {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      color: #c9a84c;
+      margin: 2px 0;
+    }
+
+    .tip {
+      background: #0d1a0d;
+      border-left: 3px solid #4caf50;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 14px;
+      color: #aad5aa;
+      font-size: 15px;
+    }
+    .tip strong { color: #7ec87e; }
+
+    .warning {
+      background: #1a1000;
+      border-left: 3px solid #c9a84c;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 14px;
+      color: #d4b56a;
+      font-size: 15px;
+    }
+
+    /* Sezione JSON */
+    .json-section { margin-bottom: 48px; }
+    .json-section h2 {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 8px;
+    }
+    .json-section .section-main-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    .json-field-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .json-field {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 12px;
+      align-items: start;
+    }
+    .json-field:hover { border-color: #2a2a2a; }
+    .json-key {
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      color: #c9a84c;
+      padding-top: 2px;
+    }
+    .json-desc {
+      color: #bbb;
+      font-size: 15px;
+    }
+    .json-desc em { color: #888; font-style: italic; font-size: 13px; display: block; margin-top: 3px; }
+    .da-configurare {
+      background: #1a0d0d;
+      border-color: #5c2222;
+    }
+    .da-configurare .json-key { color: #e07070; }
+    .badge-todo {
+      display: inline-block;
+      background: #5c2222;
+      color: #f09090;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    /* Come aprire con Blocco Note */
+    .how-to {
+      background: #0f0f0f;
+      border: 1px solid #1e1e1e;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-top: 24px;
+    }
+    .how-to h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .how-to ol {
+      padding-left: 20px;
+      color: #bbb;
+    }
+    .how-to ol li { margin-bottom: 8px; }
+    .how-to ol li strong { color: #e8e8e8; }
+
+    .json-intro { color: #bbb; margin-bottom: 24px; }
+    .code-muted { color: #888; }
+    .fields-label { margin-top: 32px; margin-bottom: 14px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #666; }
+
+    /* Regola d'oro */
+    .golden-rule {
+      background: linear-gradient(135deg, #1a1400, #111);
+      border: 1px solid #c9a84c55;
+      border-radius: 12px;
+      padding: 32px 36px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .golden-rule .icon { font-size: 36px; margin-bottom: 12px; }
+    .golden-rule p {
+      font-size: 17px;
+      color: #d4b56a;
+      line-height: 1.8;
+    }
+    .golden-rule strong { color: #c9a84c; }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      margin: 48px 0;
+    }
+
+    @media (max-width: 600px) {
+      .json-field { grid-template-columns: 1fr; }
+      .page { padding: 32px 18px 60px; }
+      .flow { padding: 24px 20px; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">VOICE — Unlock Your Art</div>
+      <h1>Come gestire il tuo sito</h1>
+      <p>Guida semplice per aggiornare i contenuti e pubblicare online</p>
+    </div>
+
+    <!-- Flusso consigliato -->
+    <div class="flow">
+      <h2>// Il flusso di lavoro</h2>
+      <div class="flow-title">Come fare le modifiche, passo per passo</div>
+      <ol class="steps">
+        <li>
+          <div class="step-text">
+            <strong>Fai doppio click su <span class="file-badge">avvia-modifiche.bat</span></strong> — si apre automaticamente la finestra nera con il sito in anteprima, Visual Studio Code e il browser con il tuo sito già caricato.
+          </div>
+        </li>
+        <li>
+          <div class="step-text">
+            <strong>Modifica i contenuti</strong> — in Visual Studio Code apri
+            <span class="file-badge">src/_data/it.json</span> per l'italiano o
+            <span class="file-badge">src/_data/en.json</span> per l'inglese. Fai le modifiche e salva con <strong>Ctrl+S</strong>.
+          </div>
+        </li>
+        <li>
+          <div class="step-text">
+            <strong>Controlla il risultato</strong> — torna sul browser e aggiorna la pagina
+            (tasto <strong>F5</strong> oppure <strong>Ctrl+R</strong>). Le modifiche appariranno subito.
+          </div>
+        </li>
+        <li>
+          <div class="step-text">
+            <strong>Quando sei soddisfatta</strong> — chiudi la finestra nera. Poi fai doppio click su
+            <span class="file-badge">update.bat</span> e premi <strong>INVIO</strong>.
+          </div>
+        </li>
+        <li>
+          <div class="step-text">
+            <strong>Aspetta 1-2 minuti</strong> e controlla il tuo sito online. Le modifiche sono pubblicate!
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Avvia modifiche -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">✏️</div>
+        <div>
+          <div class="section-label">// Strumento 1</div>
+          <div class="section-title">avvia-modifiche.bat</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>Questo è il file da cui si parte sempre. Con un solo doppio click <strong>avvia il sito in anteprima sul tuo PC</strong> e <strong>apre Visual Studio Code</strong> per modificare i testi — tutto in una volta.</p>
+        <p>Da Visual Studio Code puoi aprire i file <span class="file-badge">src/_data/it.json</span> e <span class="file-badge">src/_data/en.json</span> dalla colonna di sinistra, modificare i testi e salvare con <strong>Ctrl+S</strong>.</p>
+        <div class="tip">
+          <strong>Quando usarlo:</strong> ogni volta che vuoi lavorare sul sito. È l'unico file che devi aprire per iniziare — fa tutto lui.
+        </div>
+        <div class="warning">
+          Lascia la finestra nera aperta mentre lavori. Se la chiudi, l'anteprima del sito si spegne.
+        </div>
+      </div>
+    </div>
+
+    <!-- Update -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🚀</div>
+        <div>
+          <div class="section-label">// Strumento 3</div>
+          <div class="section-title">update.bat</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>Questo file <strong>pubblica le tue modifiche online</strong>, rendendole visibili a tutti i visitatori del sito.</p>
+        <p>Come funziona: fai doppio click → si apre una finestra nera → premi <strong>INVIO</strong> → aspetta qualche secondo → fatto.</p>
+        <div class="tip">
+          <strong>Quando usarlo:</strong> solo quando sei soddisfatta delle modifiche e vuoi che tutti le vedano. Dopo aver premuto INVIO, il sito online si aggiorna in 1-2 minuti.
+        </div>
+        <div class="warning">
+          Premi <strong>Q + INVIO</strong> per uscire senza pubblicare nulla, se hai aperto il file per sbaglio.
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Sezione JSON -->
+    <div class="json-section">
+      <h2>// I contenuti del sito</h2>
+      <div class="section-main-title">Cosa puoi modificare nei file di testo</div>
+
+      <p class="json-intro">
+        Tutti i testi del sito si trovano in due file: <span class="file-badge">src/_data/it.json</span> (versione italiana)
+        e <span class="file-badge">src/_data/en.json</span> (versione inglese).
+        Li apri da Visual Studio Code, cambi il testo dopo i <code class="code-muted">:</code> e salvi.
+      </p>
+
+      <div class="how-to">
+        <h3>Come aprire e modificare un file in Visual Studio Code</h3>
+        <ol>
+          <li>Fai doppio click su <strong>avvia-modifiche.bat</strong> — si apre Visual Studio Code</li>
+          <li>Nella colonna di sinistra, clicca sulla cartella <strong>src</strong> → <strong>_data</strong></li>
+          <li>Clicca sul file <strong>it.json</strong> (o <strong>en.json</strong>) per aprirlo</li>
+          <li>Trova il testo che vuoi cambiare e modificalo</li>
+          <li>Salva con <strong>Ctrl+S</strong></li>
+          <li>Torna sul browser e premi <strong>F5</strong> per vedere le modifiche</li>
+        </ol>
+      </div>
+
+      <div class="fields-label">
+        Guida ai campi
+      </div>
+
+      <div class="json-field-list">
+
+        <div class="json-field">
+          <div class="json-key">meta_title<br>meta_description</div>
+          <div class="json-desc">
+            Il titolo e la descrizione che appaiono nei motori di ricerca (Google) e quando condividi il link sui social.
+            <em>Es. "VOICE — Unlock Your Art"</em>
+          </div>
+        </div>
+
+        <div class="json-field">
+          <div class="json-key">nav_cta<br>cta_url</div>
+          <div class="json-desc">
+            Il testo e il link del pulsante principale in cima alla pagina ("Prenota la Call Gratuita").
+            <em>Cambia <strong>cta_url</strong> con il tuo link Calendly personale.</em>
+          </div>
+        </div>
+
+        <div class="json-field">
+          <div class="json-key">hero_title_*<br>hero_sub</div>
+          <div class="json-desc">
+            Il titolo grande della prima schermata e il testo descrittivo sotto.
+            <em>"Sblocca la tua Voce. Libera la tua Arte." + il paragrafo introduttivo.</em>
+          </div>
+        </div>
+
+        <div class="json-field">
+          <div class="json-key">blocco_*_title<br>blocco_*_sub</div>
+          <div class="json-desc">
+            I quattro blocchi nella sezione "Il Problema": Ansia da performance, Paura del giudizio, Autosabotaggio, Frustrazione.
+          </div>
+        </div>
+
+        <div class="json-field">
+          <div class="json-key">pillar_*_title<br>pillar_*_body</div>
+          <div class="json-desc">
+            Le cinque dimensioni del metodo VOICE: Identità, Relazioni, Paura del giudizio, Valore, Missione artistica.
+          </div>
+        </div>
+
+        <div class="json-field da-configurare">
+          <div class="json-key">
+            <span class="badge-todo">Da fare</span><br>
+            coach_bio_1<br>coach_bio_2<br>coach_quote
+          </div>
+          <div class="json-desc">
+            La tua presentazione personale: da dove sei partita, il tuo percorso come artista, le tue credenziali e una frase che ti rappresenta.
+            <em>Questi campi contengono ancora "[Da configurare]" — vanno compilati con i tuoi testi.</em>
+          </div>
+        </div>
+
+        <div class="json-field da-configurare">
+          <div class="json-key">
+            <span class="badge-todo">Da fare</span><br>
+            nonperchi_items
+          </div>
+          <div class="json-desc">
+            L'elenco di chi <em>non</em> è adatto al percorso. Quattro punti da personalizzare con i tuoi criteri.
+          </div>
+        </div>
+
+        <div class="json-field">
+          <div class="json-key">testi</div>
+          <div class="json-desc">
+            Le testimonianze: nome, ruolo e testo di ogni persona. Puoi modificare quelle esistenti o aggiungerne di nuove.
+            <em>Ogni testimonianza è racchiusa tra { } con nome, ruolo e testo.</em>
+          </div>
+        </div>
+
+        <div class="json-field da-configurare">
+          <div class="json-key">
+            <span class="badge-todo">Da fare</span><br>
+            faq
+          </div>
+          <div class="json-desc">
+            Le domande frequenti: ogni domanda ha una "q" (domanda) e una "a" (risposta). Scrivi le domande che ricevi più spesso.
+          </div>
+        </div>
+
+        <div class="json-field">
+          <div class="json-key">social</div>
+          <div class="json-desc">
+            I link ai tuoi profili social. Per attivare o disattivare un social cambia <strong>true</strong> (visibile) o <strong>false</strong> (nascosto).
+            <em>Instagram, Facebook e TikTok sono già configurati.</em>
+          </div>
+        </div>
+
+        <div class="json-field">
+          <div class="json-key">cta_url</div>
+          <div class="json-desc">
+            Il link al tuo Calendly per prenotare la call gratuita. Aggiornalo se cambi il link di prenotazione.
+            <em>Appare in più punti della pagina — cambiarlo qui lo aggiorna ovunque.</em>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Regola d'oro -->
+    <div class="golden-rule">
+      <div class="icon">✦</div>
+      <p>
+        Ricorda: le modifiche ai file di testo<br>
+        <strong>non cambiano il sito online</strong> finché non usi <strong>update.bat</strong>.<br><br>
+        Puoi provare, sbagliare e correggere in tutta tranquillità —<br>
+        nessuno vedrà nulla finché non decidi tu di pubblicare.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
