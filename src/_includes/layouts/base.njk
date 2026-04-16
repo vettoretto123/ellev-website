@@ -9,17 +9,22 @@
   <meta property="og:description" content="{{ t.meta_description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="{{ t.og_image }}" />
+  <meta property="og:url" content="{{ page.url }}" />
+  <meta property="og:locale" content="{{ 'it_IT' if t.lang == 'it' else 'en_US' }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="{{ page.url }}" />
   <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
   <link rel="alternate" hreflang="it" href="/" />
   <link rel="alternate" hreflang="en" href="/en/" />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
   <!-- version 0.2 -->
   <!-- NAVBAR -->
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="{{ '/' if t.lang == 'it' else '/en/' }}">
       <img src="/assets/images/VOICE-W-03.png" alt="VOICE Unlock Your Art" class="nav-logo" />
     </a>

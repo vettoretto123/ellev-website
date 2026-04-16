@@ -37,7 +37,7 @@
   "cose_title_1": "Un percorso che lavora",
   "cose_title_em": "alla radice di ciò che ti limita",
   "cose_body": "VOICE non è un corso di canto. Non lavoriamo sulla tecnica. <strong>Lavoriamo su di te.</strong><br><br>Che tu sia bloccato o in carriera, il punto è lo stesso: — quando cambi tu, cambia il modo in cui vivi, ti esprimi e crei la tua arte.",
-  "cose_quote": "''La statua è già dentro il blocco di marmo, basta saper togliere il superfluo.''",
+  "cose_quote": "«La statua è già dentro il blocco di marmo, basta saper togliere il superfluo.»",
 
   "metodo_label": "// Il Metodo",
   "metodo_title_1": "Le cinque dimensioni",
@@ -53,7 +53,7 @@
   "pillar_5_title": "E - Emozione",
   "pillar_5_body": "La capacità di comprendere e gestire le emozioni per comunicare e creare connessioni autentiche sul palco e fuori.",
 
-  "perchi_label": "// Per Chi è voice?",
+  "perchi_label": "// Per Chi è VOICE?",
   "perchi_title_1": "Per artisti che",
   "perchi_title_em": "sanno di poter andare oltre!",
   "perchi_1": "Vuoi fare un salto di qualità nella tua carriera e nella tua vita",
@@ -103,16 +103,16 @@
   "coach_name": "Elle.V",
   "coach_bio_1": "Sono un cantante, artista e coach certificato in PNL che lavora con artisti e performer che vogliono evolvere OLTRE LA TECNICA.",
   "coach_bio_2": "Ho vissuto in prima persona ciò che insegno: dal terrore di cantare in pubblico fino a realizzare il mio sogno di diventare un cantante ed esibirmi in teatri importanti. Nel mio percorso ho scoperto che la voce non si sblocca solo con la tecnica, ma quando si trasforma PROFONDAMENTE la persona che sta dietro l'artista. Quando hai una strategia, fiducia in te stesso e strumenti per lavorare su te stesso, puoi raggiungere obiettivi che sembrano impossibili — sul palco e nella VITA QUOTIDIANA. È anche per questo che ho scelto di affrontare sfide come la Maratona di New York e la traversata a nuoto dello Stretto di Messina: esperienze che mi hanno insegnato a superare i limiti mentali prima ancora che fisici. Perchè sul palco non porti solo ciò che sai fare, ma CIO' CHE SEI.",
-  "coach_quote": "''L'arte non è un luogo in cui rifugiarsi, ma il mezzo attraverso cui esprimere pienamente se stessi.''",
+  "coach_quote": "«L'arte non è un luogo in cui rifugiarsi, ma il mezzo attraverso cui esprimere pienamente se stessi.»",
 
   "testi_label": "// Cosa dicono",
   "testi_title_1": "Artisti che si sono",
   "testi_title_em": "già sbloccati",
   "testi_show": true,
   "testi": [
-    { "nome": "Sara M.", "ruolo": "Cantautrice", "testo": "''Pensavo fosse un problema tecnico, in realtà era qualcosa che mi portavo dentro da anni. Ora mi esibisco con una presenza completamente diversa. Oggi mi sento più serena, e di conseguenza ho un rapporto migliore anche con i miei colleghi''" },
-    { "nome": "Luca F.", "ruolo": "Attore e performer", "testo": "''Non ero bloccato sul palco, ma mi mancava qualcosa nella vita.. e questo si rifletteva ovunque. VOICE mi ha fatto fare un salto enorme come persona e come artista. In tre mesi ho fatto più strada che in cinque anni di corsi.''" },
-    { "nome": "Giulia R.", "ruolo": "Musicista", "testo": "''È un lavoro che va oltre la performance. Ti cambia il modo di stare nelle cose. E questo si sente subito anche fuori dal palco, con amici ma soprattutto con la mia famiglia.''" }
+    { "nome": "Sara M.", "ruolo": "Cantautrice", "testo": "«Pensavo fosse un problema tecnico, in realtà era qualcosa che mi portavo dentro da anni. Ora mi esibisco con una presenza completamente diversa. Oggi mi sento più serena, e di conseguenza ho un rapporto migliore anche con i miei colleghi.»" },
+    { "nome": "Luca F.", "ruolo": "Attore e performer", "testo": "«Non ero bloccato sul palco, ma mi mancava qualcosa nella vita… e questo si rifletteva ovunque. VOICE mi ha fatto fare un salto enorme come persona e come artista. In tre mesi ho fatto più strada che in cinque anni di corsi.»" },
+    { "nome": "Giulia R.", "ruolo": "Musicista", "testo": "«È un lavoro che va oltre la performance. Ti cambia il modo di stare nelle cose. E questo si sente subito anche fuori dal palco, con amici ma soprattutto con la mia famiglia.»" }
   ],
 
   "faq_label": "// Domande Frequenti",

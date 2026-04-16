@@ -30,14 +30,14 @@
   "blocco_2_sub": "Even when you're good, something inside keeps questioning you",
   "blocco_3_title": "SELF-SABOTAGE",
   "blocco_3_sub": "You repeat patterns that hold you back, even without realizing it",
-  "blocco_4_title": "MISALIGMENT",
+  "blocco_4_title": "MISALIGNMENT",
   "blocco_4_sub": "Everything seems perfect on the outside, but something feels off inside",
 
   "cose_label": "// What is VOICE",
   "cose_title_1": "A journey that works",
   "cose_title_em": "at the root of what limits you",
   "cose_body": "VOICE is not a singing course. We don't work on technique. <strong>We work on YOU!</strong><br><br>Whether you feel blocked or you're already in your career, the point is the same: — when you change, the way you live, express yourself, and create your art CHANGES.",
-  "cose_quote": "''The statue is already inside the block of marble, you just need to remove the excess.''",
+  "cose_quote": "\u201cThe statue is already inside the block of marble, you just need to remove the excess.\u201d",
 
   "metodo_label": "// The Method",
   "metodo_title_1": "The five dimensions",
@@ -103,16 +103,16 @@
   "coach_name": "Elle.V",
   "coach_bio_1": "I am a singer, artist, and certified NLP coach who works with artists and performers who want to evolve BEYOND TECHNIQUE.",
   "coach_bio_2": "I have personally lived what I teach: from the fear of singing in public to achieving my dream of becoming a singer and performing in important theaters. In my journey, I discovered that the voice doesn't unlock through technique alone, but when the person behind the artist transforms DEEPLY. When you have a strategy, self-confidence, and tools to work on yourself, you can achieve goals that seem impossible — on stage and in EVERYDAY LIFE. This is also why I chose to face challenges like the New York Marathon and swimming across the Strait of Messina: experiences that taught me to overcome mental limits before physical ones. Because on stage you don't just bring what you can do, but WHO YOU ARE.",
-  "coach_quote": "''Art is not a place to seek refuge, but a means through which to fully express yourself.''",
+  "coach_quote": "\u201cArt is not a place to seek refuge, but a means through which to fully express yourself.\u201d",
 
   "testi_label": "// Testimonials",
   "testi_title_1": "Artists who have",
   "testi_title_em": "already overcome their blocks",
   "testi_show": true,
   "testi": [
-    { "nome": "Sara M.", "ruolo": "Singer-songwriter", "testo": "''I thought it was a technical problem, but it was actually something I had been carrying inside for years. Now I perform with a completely different presence. Today I feel more at ease, and as a result I also have a better relationship with my colleagues''" },
-    { "nome": "Luca F.", "ruolo": "Actor & performer", "testo": "''I wasn't blocked on stage, but something was missing in my life… and it reflected everywhere. VOICE helped me make a huge leap as a person and as an artist. In three months I made more progress than in five years of courses.''" },
-    { "nome": "Giulia R.", "ruolo": "Musician", "testo": "''It's a work that goes beyond performance. It changes the way you show up in life. And you feel it immediately even off stage, with friends but especially with my family.''" }
+    { "nome": "Sara M.", "ruolo": "Singer-songwriter", "testo": "\u201cI thought it was a technical problem, but it was actually something I had been carrying inside for years. Now I perform with a completely different presence. Today I feel more at ease, and as a result I also have a better relationship with my colleagues.\u201d" },
+    { "nome": "Luca F.", "ruolo": "Actor & performer", "testo": "\u201cI wasn't blocked on stage, but something was missing in my life\u2026 and it reflected everywhere. VOICE helped me make a huge leap as a person and as an artist. In three months I made more progress than in five years of courses.\u201d" },
+    { "nome": "Giulia R.", "ruolo": "Musician", "testo": "\u201cIt's a work that goes beyond performance. It changes the way you show up in life. And you feel it immediately even off stage, with friends but especially with my family.\u201d" }
   ],
 
   "faq_label": "// Frequently Asked Questions",
