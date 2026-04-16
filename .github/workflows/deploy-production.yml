@@ -35,6 +35,7 @@ jobs:
         with:
           publish-dir: '_site'
           production-deploy: true
+          production-branch: main
           deploy-message: "Deploy Production - ${{ github.sha }}"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
