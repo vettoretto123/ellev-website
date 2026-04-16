@@ -565,7 +565,7 @@ footer p { font-size: 0.75rem; color: var(--gray); }
 @media (max-width: 800px) {
   nav { padding: 0.9rem 1.4rem; }
   .nav-right { gap: 1rem; }
-  .nav-cta { font-size: 0.7rem; padding: 0.45rem 0.9rem; }
+  .nav-cta { font-size: 0.5rem; padding: 0.45rem 0.9rem; }
   .two-col { grid-template-columns: 1fr; gap: 3rem; }
   .struttura-grid { grid-template-columns: 1fr; }
   .pillars { grid-template-columns: 1fr 1fr; }
