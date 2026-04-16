@@ -24,33 +24,21 @@ layout: layouts/base.njk
 </header>
 
 <!-- PROBLEMA -->
-<section id="problema" class="reveal two-col">
+<section id="problema" class="reveal">
   <div class="problema-text">
     <p class="section-label">{{ t.problema_label }}</p>
     <h2 class="section-title">{{ t.problema_title_1 }}<br/><em>{{ t.problema_title_em }}</em></h2>
     <div class="divider"></div>
     <p>{{ t.problema_body_1 }}</p>
     <p><strong>{{ t.problema_body_2 }}</strong></p>
-    <div class="pill-note">{{ t.problema_pill }}</div>
+    <p class="problema-note">{{ t.problema_pill }}</p>
   </div>
-  <ul class="blocchi-list">
-    <li>
-      <span class="icon">😰</span>
-      <div><strong>{{ t.blocco_1_title }}</strong><span class="desc">{{ t.blocco_1_sub }}</span></div>
-    </li>
-    <li>
-      <span class="icon">👁️</span>
-      <div><strong>{{ t.blocco_2_title }}</strong><span class="desc">{{ t.blocco_2_sub }}</span></div>
-    </li>
-    <li>
-      <span class="icon">🔁</span>
-      <div><strong>{{ t.blocco_3_title }}</strong><span class="desc">{{ t.blocco_3_sub }}</span></div>
-    </li>
-    <li>
-      <span class="icon">⚡</span>
-      <div><strong>{{ t.blocco_4_title }}</strong><span class="desc">{{ t.blocco_4_sub }}</span></div>
-    </li>
-  </ul>
+  <div class="blocchi-grid">
+    <div class="blocco-card"><span class="blocco-icon">🚫</span><h3>{{ t.blocco_1_title }}</h3><p>{{ t.blocco_1_sub }}</p></div>
+    <div class="blocco-card"><span class="blocco-icon">🚫</span><h3>{{ t.blocco_2_title }}</h3><p>{{ t.blocco_2_sub }}</p></div>
+    <div class="blocco-card"><span class="blocco-icon">🚫</span><h3>{{ t.blocco_3_title }}</h3><p>{{ t.blocco_3_sub }}</p></div>
+    <div class="blocco-card"><span class="blocco-icon">🚫</span><h3>{{ t.blocco_4_title }}</h3><p>{{ t.blocco_4_sub }}</p></div>
+  </div>
 </section>
 
 <!-- COS'È / WHAT IS -->

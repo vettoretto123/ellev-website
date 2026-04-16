@@ -337,19 +337,43 @@ section {
 /* ─── PROBLEMA ─── */
 .problema-text p { color: var(--gray); font-size: 1.05rem; margin-top: 1.8rem; line-height: 1.9; }
 .problema-text strong { color: var(--ivory); }
-.pill-note {
-  display: inline-block;
-  margin-top: 2.5rem;
-  background: rgba(224,64,251,0.1);
-  border: 1px solid rgba(224,64,251,0.35);
-  color: var(--fuchsia);
-  padding: 0.7rem 1.4rem;
-  font-size: 0.88rem;
+.problema-text .problema-note {
+  margin-top: 1.5rem;
+  color: #02E5C0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
-.blocchi-list { list-style: none; display: flex; flex-direction: column; gap: 1.3rem; }
-.blocchi-list li { display: flex; align-items: flex-start; gap: 1rem; font-size: 1.05rem; }
-.blocchi-list li .icon { font-size: 1.4rem; min-width: 2rem; text-align: center; margin-top: 0.05rem; }
-.blocchi-list li .desc { color: var(--gray); font-size: 0.88rem; display: block; }
+/* ─── BLOCCHI GRID ─── */
+.problema-text { text-align: center; max-width: 720px; margin: 0 auto; }
+.blocchi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.blocco-card {
+  background: var(--obsidian);
+  border: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, border-color 0.25s;
+}
+.blocco-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(3,227,191,0.07), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.blocco-card:hover { transform: translateY(-5px); border-color: var(--teal); }
+.blocco-card:hover::before { opacity: 1; }
+.blocco-icon { font-size: 1.6rem; display: block; margin-bottom: 0.8rem; }
+.blocco-card { text-align: center; }
+.blocco-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; }
+.blocco-card p { font-size: 0.86rem; color: var(--gray); line-height: 1.6; }
 
 /* ─── COS'È ─── */
 .lead { max-width: 680px; margin: 0 auto; font-size: 1.08rem; color: var(--gray); line-height: 1.9; }
@@ -546,10 +570,12 @@ footer p { font-size: 0.75rem; color: var(--gray); }
   .struttura-grid { grid-template-columns: 1fr; }
   .pillars { grid-template-columns: 1fr 1fr; }
   footer { flex-direction: column; gap: 1rem; text-align: center; }
+  .blocchi-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) {
   section { padding: 5rem 1.2rem; }
   .pillars { grid-template-columns: 1fr; }
+  .blocchi-grid { grid-template-columns: 1fr; }
 }
 
 /* ─── STICKY CTA ─── */
