@@ -170,9 +170,6 @@ nav {
   background: rgba(13,13,13,0.88);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 .nav-logo { height: 48px; width: auto; margin-top:10px}
 .nav-right {
