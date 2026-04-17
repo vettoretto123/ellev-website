@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="privacy-page">
+  <a href="{{ '/' if t.lang == 'it' else '/en/' }}" class="privacy-back">&larr; {{ t.privacy_back }}</a>
+  <h1>{{ t.privacy_title }}</h1>
+  <p class="privacy-update">{{ t.privacy_last_update }}</p>
+  {{ content | safe }}
+</section>
+
+<footer>
+  <img src="/assets/images/logo.jpg" alt="VOICE" />
+  <p>{{ t.footer_copy }}</p>
+</footer>

@@ -238,4 +238,5 @@ layout: layouts/base.njk
     {% endfor %}
   </div>
   <p>{{ t.footer_copy }}</p>
+  <a href="{{ '/privacy/' if t.lang == 'it' else '/en/privacy/' }}" class="footer-privacy">{{ t.privacy_link }}</a>
 </footer>

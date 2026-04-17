@@ -1,0 +1,13 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{% if env.ENVIRONMENT == "production" %}
+User-agent: *
+Allow: /
+
+Sitemap: https://www.unlockyourart.com/sitemap.xml
+{% else %}
+User-agent: *
+Disallow: /
+{% endif %}

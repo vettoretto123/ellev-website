@@ -1,4 +1,9 @@
 export default function(eleventyConfig) {
+  // Expose environment variables to templates
+  eleventyConfig.addGlobalData("env", {
+    ENVIRONMENT: process.env.ENVIRONMENT || "test"
+  });
+
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
 
