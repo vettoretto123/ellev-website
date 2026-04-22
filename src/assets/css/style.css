@@ -818,3 +818,84 @@ details[open] .faq-question::after {
   align-items: center;
 }
 .social-link:hover { color: var(--gold); }
+
+/* ─── FOOTER PRIVACY LINK ─── */
+.footer-privacy {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.72rem;
+  color: var(--gray);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+.footer-privacy:hover { color: var(--gold); }
+
+/* ─── PRIVACY PAGE ─── */
+.privacy-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+.privacy-back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--teal);
+  text-decoration: none;
+}
+.privacy-back:hover { text-decoration: underline; }
+.privacy-page h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
+}
+.privacy-update {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-bottom: 3rem;
+}
+.privacy-page h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+.privacy-page h3 {
+  font-size: 0.95rem;
+  color: var(--ivory);
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.privacy-page p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+.privacy-page ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.privacy-page ul li {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.8;
+  padding-left: 1.4rem;
+  position: relative;
+}
+.privacy-page ul li::before {
+  content: '\25B8';
+  color: var(--gold);
+  position: absolute;
+  left: 0;
+}
+.privacy-page a {
+  color: var(--teal);
+  text-decoration: none;
+}
+.privacy-page a:hover { text-decoration: underline; }

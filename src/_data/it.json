@@ -4,9 +4,9 @@
   "other_lang": "en",
   "other_lang_label": "ENG",
   "other_lang_url": "/en/",
-  "meta_title": "VOICE — Unlock Your Art",
-  "meta_description": "Un percorso concreto di evoluzione per cantanti e artisti che vogliono superare blocchi, paure e autosabotaggi.",
-  "og_image": "https://TUOSITO.com/assets/images/og-image.jpg",
+  "meta_title": "Coaching per Cantanti e Artisti | VOICE – Elle.V",
+  "meta_description": "Percorso di coaching PNL per cantanti e artisti che vogliono superare ansia da performance, paura del giudizio e autosabotaggio. Sessioni 1:1 online con Elle.V. Prima call gratuita.",
+  "og_image": "https://www.unlockyourart.com/assets/images/og-image.jpg",
 
   "nav_cta": "Prenota la Call Gratuita",
   "cta_url": "https://calendly.com/ellev-artcoach/30min",
@@ -141,5 +141,10 @@
     { "attivo": false, "icona": "spotify",   "url": "https://open.spotify.com/artist/TUO_ID",     "label": "Spotify" }
   ],
 
-  "footer_copy": "© 2026 VOICE – Unlock Your Art. Tutti i diritti riservati."
+  "footer_copy": "© 2026 VOICE – Unlock Your Art. Tutti i diritti riservati.",
+
+  "privacy_title": "Informativa sulla Privacy",
+  "privacy_back": "Torna alla home",
+  "privacy_last_update": "Ultimo aggiornamento: 17 aprile 2026",
+  "privacy_link": "Privacy Policy"
 }

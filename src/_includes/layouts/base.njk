@@ -5,21 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ t.meta_title }}</title>
   <meta name="description" content="{{ t.meta_description }}" />
+  <meta name="author" content="Luca Vettoretto - Elle.V" />
   <meta property="og:title" content="{{ t.meta_title }}" />
   <meta property="og:description" content="{{ t.meta_description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="{{ t.og_image }}" />
-  <meta property="og:url" content="{{ page.url }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:locale" content="{{ 'it_IT' if t.lang == 'it' else 'en_US' }}" />
+  <meta property="og:site_name" content="VOICE – Unlock Your Art" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="{{ page.url }}" />
+  <meta name="twitter:title" content="{{ t.meta_title }}" />
+  <meta name="twitter:description" content="{{ t.meta_description }}" />
+  <meta name="twitter:image" content="{{ t.og_image }}" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
-  <link rel="alternate" hreflang="it" href="/" />
-  <link rel="alternate" hreflang="en" href="/en/" />
+  <link rel="alternate" hreflang="it" href="{{ site.url }}/" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/en/" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/assets/css/style.css" />
+
+  {% if t.faq_show and t.faq %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for item in t.faq %}
+      {
+        "@type": "Question",
+        "name": "{{ item.q }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ item.a }}"
+        }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "{{ site.url }}/#organization",
+    "name": "VOICE – Unlock Your Art",
+    "alternateName": "Elle.V Art Coach",
+    "description": "{{ t.meta_description }}",
+    "url": "{{ site.url }}/",
+    "image": "{{ t.og_image }}",
+    "founder": {
+      "@type": "Person",
+      "name": "Luca Vettoretto",
+      "alternateName": "Elle.V",
+      "jobTitle": "Certified NLP Coach",
+      "sameAs": [
+        "https://www.instagram.com/_elle.v_",
+        "https://www.facebook.com/luca.vettoretto/",
+        "https://www.tiktok.com/@elle.v7"
+      ]
+    },
+    "serviceType": "Artistic Performance Coaching",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Italy"
+    },
+    "availableLanguage": ["Italian", "English"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "VOICE Coaching Program",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "{{ 'Call di Sblocco Gratuita' if t.lang == 'it' else 'Free Unlock Call' }}",
+          "description": "{{ 'Sessione di valutazione gratuita per capire i blocchi e se VOICE è il percorso giusto.' if t.lang == 'it' else 'Free assessment session to understand your blocks and whether VOICE is the right path.' }}",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.instagram.com/_elle.v_",
+      "https://www.facebook.com/luca.vettoretto/",
+      "https://www.tiktok.com/@elle.v7"
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- version 0.2 -->

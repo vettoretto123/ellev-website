@@ -29,6 +29,8 @@ jobs:
 
       - name: Build site
         run: npm run build
+        env:
+          ENVIRONMENT: production
 
       - name: Deploy to Netlify Production
         uses: nwtgck/actions-netlify@v3.0
