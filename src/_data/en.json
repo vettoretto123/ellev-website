@@ -31,7 +31,7 @@
   "blocco_3_title": "SELF-SABOTAGE",
   "blocco_3_sub": "You repeat patterns that hold you back, even without realizing it",
   "blocco_4_title": "MISALIGNMENT",
-  "blocco_4_sub": "Everything seems perfect on the outside, but inside you no longer recognise yourself",
+  "blocco_4_sub": "Everything seems perfect on the outside, but you no longer recognise yourself inside",
 
   "cose_label": "// What is VOICE",
   "cose_title_1": "A journey that works",
@@ -65,7 +65,7 @@
   "perchi_r1": "Freedom to express yourself",
   "perchi_r2": "Clarity about your identity and artistic direction",
   "perchi_r3": "A healthier relationship with yourself, others and your journey",
-  "perchi_r4": "More emotional control in key moments",
+  "perchi_r4": "More emotional control in turning points",
   "perchi_r5": "Practical tools for life and stage",
   "perchi_r6": "A life more aligned with your art and your values",
 
@@ -112,6 +112,7 @@
   "testi": [
     { "nome": "Sara M.", "ruolo": "Singer-songwriter", "testo": "\u201cI thought it was a technical problem, but it was actually something I had been carrying inside for years. Now I perform with a completely different presence. Today I feel more at ease, and as a result I also have a better relationship with my colleagues.\u201d" },
     { "nome": "Luca F.", "ruolo": "Actor & performer", "testo": "\u201cI wasn't blocked on stage, but something was missing in my life\u2026 and it was reflecting everywhere. VOICE helped me make a huge leap as a person and as an artist. In three months I made more progress than in five years of courses.\u201d" },
+    { "nome": "Anna B.", "ruolo": "Opera singer", "testo": "\u201cAt first, I didn't really know what to expect. I started without any certainty, driven only by the desire to understand myself a little better. I feel incredibly fortunate: this journey has led me to a new sense of inner peace. I've come to realize that life isn't about holding on or pushing through, but about choosing to truly live.\u201d" },
     { "nome": "Giulia R.", "ruolo": "Musician", "testo": "\u201cIt's a work that goes beyond performance. It changes the way you show up in life. And you feel it immediately even off stage, with friends but especially with my family.\u201d" }
   ],
 
